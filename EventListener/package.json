@@ -1,0 +1,10 @@
+{
+    "name": "UserSearch-Event_handler",
+    "version": "0.0.1",
+    "main": "usersearch.js",
+    "author": "Your Name",
+    "description": "Search for user profiles",
+    "dependencies": {
+        "realm": "file:realm-1.4.3-professional.tgz"
+    }
+}
