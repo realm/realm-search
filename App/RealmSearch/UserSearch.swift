@@ -34,7 +34,6 @@ final class UserSearch: Object {
 }
 
 final class UserProfile: Object {
-    dynamic var userid = ""
     dynamic var email = ""
 }
 
