@@ -50,12 +50,15 @@ let userRealm = new Realm({
 
 var users = userRealm.objects('User');
 
-if (users.length == 0) {
-    userRealm.write(() => {
-        demoEmails.forEach(function(emailString) {
-            userRealm.create('User', { email: emailString });
+// Add an artificial delay to allow for the ROS connection to complete
+setTimeout(() => {
+    if (users.length == 0) {
+        userRealm.write(() => {
+            demoEmails.forEach(function(emailString) {
+                userRealm.create('User', { email: emailString });
+            });
         });
-    });
-}
+    }
+}, 2000);
 
 
