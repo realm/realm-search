@@ -16,3 +16,5 @@ It wouldn't make sense to download the entire public Realm to the device, so thi
 5. Start the event handler by running `node usersearch.js`.
 
 You can run the included UserSearch app to test it out. You will need to update the credentials in the file `ViewController.swift` to match a user existing on the server.
+
+![analytics](https://ga-beacon.appspot.com/UA-50247013-2/realm-search/README?pixel)
