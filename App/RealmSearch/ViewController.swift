@@ -27,7 +27,7 @@ class ViewController: UITableViewController, UISearchBarDelegate {
     let searchBar = UISearchBar()
 
     deinit {
-        notificationToken.stop()
+        notificationToken.invalidate()
     }
 
     override func viewDidLoad() {
@@ -85,7 +85,7 @@ class ViewController: UITableViewController, UISearchBarDelegate {
         self.tableView.reloadData()
 
         // Notify us when the server updates the request results
-        self.notificationToken = self.request?.users.addNotificationBlock { _ in
+        self.notificationToken = self.request?.users.observe { _ in
             self.tableView.reloadData()
         }
     }
